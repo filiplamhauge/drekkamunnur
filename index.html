@@ -3,39 +3,36 @@
 <head>
     <meta  charset="UTF-8">
     <meta  name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drekkamunnur</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-            color: #666;
-        }
-    </style>
+    <title>Café Drekkamunnur</title>
+    <link  rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div  class="container">
-        <h1>Drekkamunnur</h1>
-        <p>Heimasíðan er undir menning</p>
+    <header>
+        <h1  id="cafe-name">Café Drekkamunnur</h1>
+        <h2  id="sub-title">- Letur skjótt upp -</h2>
+        <div  class="scroll-down">
+            <span>&#x25BC;</span>
+        </div>
+    </header>
+    <main>
+        <section  id="gallery">
+            <div  class="image-container">
+                <img src="cafe1.jpg" alt="Café Image 1" id="zoom-image">
+            </div>
+        </section>
+    </main>
+    <div  class="marquee">
+        <div  class="marquee-content">
+            <p>MEIRA KUNNING KEMUR</p>
+            <p>MEIRA KUNNING KEMUR</p>
+            <p>MEIRA KUNNING KEMUR</p>
+            <p>MEIRA KUNNING KEMUR</p>
+            <p>MEIRA KUNNING KEMUR</p>
+            <p>MEIRA KUNNING KEMUR</p>
+            <p>MEIRA KUNNING KEMUR</p>
+        </div>
     </div>
+    <script  src="script.js"></script>
 </body>
 </html>

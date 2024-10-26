@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e24a;
+    color: #5e4e37;
+}
+
+header {
+    background-color: #f5e24a;
+    text-align: center;
+    padding: 20px 0; /* Reduced padding to push the title up */
+    position: fixed; /* Change from relative to fixed */
+    width: 100%; /* Ensure the header takes the full width */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.3s ease, background-color 0.3s ease, padding 0.3s ease; /* Added padding transition */
+    height: 100vh; /* Full viewport height initially */
+}
+
+header.small {
+    height: 60px;
+    background-color: #f5e24a; /* Keep the same background color */
+    padding: 10px 0; /* Reduce padding */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 5em; /* Larger initial font size */
+    transition: font-size 0.3s ease;
+}
+
+header.small h1 {
+    font-size: 1.5em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em; /* Smaller font size for sub-title */
+    transition: font-size 0.3s ease;
+    text-transform: none; /* Remove capitalization */
+}
+
+header.small h2 {
+    font-size: 1em;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 50px; /* Push the arrow up */
+    font-size: 2em;
+    animation: bounce 2s infinite;
+    display: block;
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.scroll-down.hidden {
+    opacity: 0; /* Hide the arrow */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+main {
+    padding: 20px;
+    margin-top: 100vh; /* Add margin to push the main content below the header */
+}
+
+#gallery {
+    display: flex;
+    justify-content: center; /* Center the single image */
+    margin: 20px 0;
+    padding-bottom: 200px; /* Add padding to the bottom to create empty space */
+}
+
+.image-container {
+    overflow: hidden; /* Hide overflow to create zoom effect */
+    width: 40%; /* Adjust the width of the container to make the image smaller */
+    height: auto;
+    margin-top: -100px; /* Move the image container up */
+}
+
+#zoom-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Smooth zoom transition */
+}
+
+.marquee {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #5e4e37;
+    color: #f5e24a;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite; /* Slower animation */
+}
+
+.marquee p {
+    font-size: 2em; /* Increase font size */
+    text-transform: uppercase; /* Capitalize text */
+    margin-right: 15rem; /* Space between messages */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
