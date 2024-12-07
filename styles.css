@@ -76,7 +76,7 @@ header.small h2 {
 
 .scroll-down {
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     font-size: 2em;
     animation: bounce 2s infinite;
     display: block;
