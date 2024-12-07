@@ -212,6 +212,11 @@ main {
     .marquee p {
         font-size: 1.5em;
     }
+
+    .menu-box {
+        width: 80%; /* Adjust width for smaller screens */
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -237,5 +242,10 @@ main {
 
     .marquee p {
         font-size: 1.2em;
+    }
+
+    .menu-box {
+        width: 90%; /* Adjust width for smaller screens */
+        font-size: 1em; /* Adjust font size for smaller screens */
     }
 }
